@@ -1,0 +1,9 @@
+<launch>
+
+		<!--Start Recording-->
+		<node name="rosbag_the_datas" pkg="ksu_auv" type="rosbag.sh" output="screen"/>
+		
+		<!--launch sub_ai-->
+		<node name="sub_ai" pkg="ksu_auv" type="sub_ai" output="screen" />
+
+</launch>
