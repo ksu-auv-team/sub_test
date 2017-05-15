@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 2.8.0)
 project(ksu_auv)
 
 ## Find catkin macros and libraries
@@ -10,7 +10,9 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   image_transport
 )
-find_package(OpenCV REQUIRED PATHS /root/opencv/cv3-release)
+find_package(OpenCV REQUIRED PATHS /media/ubuntu/514088C5216FDDDC/opencv3/release)
+##find_package(OpenCV 3.1.0 REQUIRED PATHS /media/ubuntu/514088C5216FDDDC/opencv3/release)
+##find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

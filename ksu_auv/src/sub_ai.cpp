@@ -516,7 +516,9 @@ int main (int argc, char **argv)
 	bouyMinYellow = Scalar(115,184,33);
 	bouyMaxYellow =	Scalar(165,255,169);
 	
-	image_transport::Subscriber image_sub = it.subscribe("/usb_cam/image_raw", 1, imageCallback);
+	
+	//image_transport::Subscriber image_sub = it.subscribe("/usb_cam/image_raw", 1, imageCallback);
+	image_transport::Subscriber image_sub = it.subscribe("/zed/stereo/left/image_rect", 1, imageCallback);
 	//ros::Subscriber status_sub = n.subscribe("mission_status", 1, status_callback); //subscribe to arduino topic
 	ros::Subscriber pressure_sub = n.subscribe("/mavros/imu/atm_pressure", 1, pressure_callback); //subscribe to arduino topic
 	ros::Subscriber manual_sub = n.subscribe("/manual_override/msg", 1, manual_override_callback);
